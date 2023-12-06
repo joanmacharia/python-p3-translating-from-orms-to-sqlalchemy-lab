@@ -30,7 +30,7 @@ class TestDog:
         '''contains function "create_table()" that takes a declarative_base and creates a SQLite database.'''
         
         engine = create_engine(SQLITE_URL)
-        create_table(Base, engine)
+        create_table(Base)
         assert os.path.exists(db_dir)
         os.remove(db_dir)
 
